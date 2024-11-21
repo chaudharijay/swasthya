@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Swasthya - AI Disease Prediction</title>
+  
+  <!-- Linking to Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Linking to Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- WOW.js for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link rel="stylesheet" href="/statics/css/index.css">
+</head>
+<body>
+  <video autoplay loop muted class="video-background">
+    <source src="/statics/videos/waves.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Hero Section with video background -->
+  <div class="page-hero">
+    <div class="hero-section">
+      <!-- Video background -->
+      
+      
+      <div class="container text-center wow animate__animated animate__zoomIn">
+        <h1 class="display-4">Swasthya</h1>
+        <span>- AI-Powered Disease Prediction for Better Health and Smarter Decisions -</span> 
+      </div>
+    </div>
+  </div>
+
+  <!-- New Content Section for Symptoms Form -->
+  <div class="text-white symptoms">
+    <div style="text-align: center;">
+      <form action="/predict" method="post">
+        <label for="symptoms">Enter symptoms (separated by commas) </label>
+        <input type="text" id="symptoms" name="symptoms" required placeholder="itching, sweat...">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  
+
+</body>
+</html>

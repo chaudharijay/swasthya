@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Swasthya - AI Disease Prediction</title>
+
+  <style>
+    /* Main styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .container-boxing {
+      margin: 20px auto;
+      padding: 20px;
+      font-size: 20px;
+      
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      max-width: 900px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #CCCCCC;
+      border-radius: 30px;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #86ABCF;
+      color: black;
+      padding: 12px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 40%;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5e8ca0;
+      transform: scale(1.05);
+    }
+
+    /* Style for the ordered list */
+    ol {
+      margin: 20px 0;
+      padding: 10px;
+      background-color: transparent;
+      
+      margin-left: 30px;
+      
+      width:max-content;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+    }
+
+    ol li {
+      list-style: none;
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    
+    
+
+    /* Media queries */
+    @media only screen and (max-width: 767px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .container-boxing {
+        padding: 10px;
+      }
+
+      input[type="text"] {
+        max-width: 100%;
+      }
+
+      .img-container img {
+        max-width: 100px;
+        margin: 0 5px;
+      }
+    }
+
+  
+    .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures the video stays behind the content */
+  }
+  .bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  </style>
+</head>
+<body>
+  <video autoplay loop muted class="video-background">
+    <source src="/statics/videos/waves.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="container-boxing">
+    <form action="{{ url_for('treatment') }}" method="post">
+      <p>Analysis Results: Possible Health Concerns</p>
+      <ol>
+        {% for x in arr %}
+        <li>{{ x }}</li>
+        {% endfor %}
+      <ol>
+      <div class="bottom">
+        <label for="relevance">Please select the relevant disease (case-sensitive):</label>
+      <input type="text" name="dis">
+      <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
