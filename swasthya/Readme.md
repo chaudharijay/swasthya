@@ -3,6 +3,13 @@
 Swasthya is a web application designed to help users track their mood and sleep patterns while providing insights and suggestions for improving mental well-being and sleep quality. The application includes features like mood logging, sleep tracking, a calendar view, and interactive breathing exercises and disease prediction using machine learning.
 
 
+![Image 1](https://i.ibb.co/Pw0QjxY/Screenshot-2024-11-22-005557.png)
+![Image 2](https://i.ibb.co/VB5Cn6c/Screenshot-2024-11-22-005614.png)
+![Image 3](https://i.ibb.co/LZ0gs1x/Screenshot-2024-11-22-005626.png)
+![Image 4](https://i.ibb.co/nc0FNkq/Screenshot-2024-11-22-005643.png)
+![Image 5](https://i.ibb.co/KjrFJkn/Screenshot-2024-11-22-005654.png)
+
+
 ## Features
 - **Disease Prediction**: Machine learning-based prediction of potential diseases based on mood and sleep data, helping users identify early warning signs of health issues.
 - **Mood Logger**: Users can log their mood with various parameters such as stress, happiness, energy, focus, and calmness.
